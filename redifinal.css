@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    width: 95%;
+    color:#060707;
+    font: sans-serif,monospace;
+    text-align: center;
+    line-height: 2em;
+    padding: 3%;
+    background-image: url(https://hubble-live-assets.s3.amazonaws.com/bsem/post/image/45/content_fusion-medical-animation-npjP0dCtoxo-unsplash.jpg);
+   
+  }
+
+   .symptom1{
+       border:1px black solid;
+   }
+ 
+   #symptom1, #symptom2, #symptom3, #symptom4, #symptom5
+   {
+    background-color: burlywood;
+    opacity: 0.9;
+   
+  }
+
+   #chart_div
+    {
+      background-color: none;
+    }
