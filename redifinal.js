@@ -36,12 +36,12 @@ function changetosym2() {
    
    console.log ("riskscore : "+riskscore); 
    console.log (reco1);
-  document.getElementById('symptom1').innerHTML="<div id='symptom2'><h3>2. Have you traveled outside of the country in the past 14 days?</h3>"+
+  document.getElementById('symptom1').innerHTML="<div id='symptom2'><h2>2. Have you traveled outside of the country in the past 14 days?</h2>"+
     "<input type='radio' id='sym2yes' name='sym2radio' required>"+
     "<label for='Yes'>Yes</label>"+
     "<input type='radio' id='sym2no' name='sym2radio'>"+
     "<label for='No'>No</label>"+
-    "<p><button onclick='changetosym3()'>Next</button></p></div>";
+    "<p><button onclick='changetosym3()'><span>Next</span></button></p></div>";
     
     }
   
@@ -66,9 +66,9 @@ function changetosym2() {
    
   console.log ("riskscore : "+riskscore);
   console.log ("Advise 2 : "+reco2);
-  document.getElementById('symptom2').innerHTML="<div id='symptom3'><h3>3. In the past 7 days, have you been in contact with someone who tested positive for COVID-19?</h3>"+
+  document.getElementById('symptom2').innerHTML="<div id='symptom3'><h2>3. In the past 7 days, have you been in contact with someone who tested positive for COVID-19?</h2>"+
     "<input type='radio' id='sym3yes' name='sym3radio' required><label for='Yes'>Yes</label><input type='radio' id='sym3no' name='sym3radio'><label for='No'>No</label>"+
-    "<p><button onclick='changetosym4()'>Next</button></p></div>";
+    "<p><button onclick='changetosym4()'><span>Next</span></button></p></div>";
   }
 
   function changetosym4() {
@@ -90,9 +90,9 @@ function changetosym2() {
    
     console.log ("riskscore : "+riskscore);
     console.log ("Advise 3 : "+reco3);
-    document.getElementById('symptom3').innerHTML="<div id='symptom4'><h3>4. In the past 14 days, have you been in contact with someone who exhibited any symptoms related to COVID-19?</h3>"+
+    document.getElementById('symptom3').innerHTML="<div id='symptom4'><h2>4. In the past 14 days, have you been in contact with someone who exhibited any symptoms related to COVID-19?</h2>"+
      "<input type='radio' id='sym4yes' name='sym4radio'><label for='Yes'>Yes</label><input type='radio' id='sym4no' name='sym4radio'><label for='No'>No</label>"+
-     "<p><button onclick='changetosym5()'>Next</button></p></div>";
+     "<p><button onclick='changetosym5()'><span>Next</span></button></p></div>";
     }
 
 
@@ -116,9 +116,9 @@ function changetosym2() {
     console.log ("riskscore : "+riskscore);
     console.log ("Advise 4 : "+reco4);
     
-    document.getElementById('symptom4').innerHTML="<div id='symptom5'><h3><h3>5. Are you using mask in public aera?</h3>"+
+    document.getElementById('symptom4').innerHTML="<div id='symptom5'><h2>5. Are you using mask in public aera?</h2>"+
     "<input type='radio' id='sym5yes' name='sym5radio' required><label for='Yes'>Yes</label><input type='radio' id='sym5no' name='sym5radio'><label for='No'>No</label>"+
-    "<p><button onclick='changetosym6()'>Next</button></p></div>";
+    "<p><button onclick='changetosym6()'><span>Next</span></button></p></div>";
    
   }
 
@@ -143,15 +143,16 @@ function changetosym2() {
     console.log ("riskscore : "+riskscore);
     console.log ("Advise 5 : "+reco5);
    
-    document.getElementById('symptom5').innerHTML="<div id='symptom6'><h3>6. Are you frequently washing/sanitize your hands?</h3>"+
+    document.getElementById('symptom5').innerHTML="<div id='symptom6' align='center'><h2>6. Are you frequently washing/sanitize your hands?</h2>"+
     "<input type='radio' id='sym6yes' name='sym6radio' required><label for='Yes'>Yes</label><input type='radio' id='sym6no' name='sym6radio'><label for='No'>No</label>"+
     "<p><button onclick='Submit()'>Submit</button></p></div>";
    
   }
 
  function Submit() {
-
-      document.getElementById('symptom6').innerHTML="<h3> Risk of Covid-19 Infection </h3> <div id='chart_div' style='width: 600px; height: 220px;'></div>";
+  
+      document.getElementById("para").style.visibility = "hidden";
+      document.getElementById('symptom6').innerHTML="<h2> Risk of Covid-19 Infection </h2> <div align='center' id='chart_div' style='width: 600px; height: 220px;'>";
       google.charts.load('current', {'packages':['gauge']});
       google.charts.setOnLoadCallback(drawChart);    
     }
